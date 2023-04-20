@@ -1,16 +1,14 @@
-import React from 'react'
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Container,
-} from 'react-bootstrap'
+import React from 'react';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 
 // 要使用能有active css效果的NavLink元件
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom';
+// import '~bootstrap/scss/bootstrap.scss';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function MyNavbar(props) {
-  const { auth } = props
+  const { auth } = props;
 
   return (
     <>
@@ -41,45 +39,24 @@ function MyNavbar(props) {
                   會員專區
                 </Nav.Link>
               )}
-              <NavDropdown
-                title="產品"
-                id="collasible-nav-dropdown"
-              >
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/product/earring"
-                >
+              <NavDropdown title="產品" id="collasible-nav-dropdown">
+                <NavDropdown.Item as={NavLink} to="/product/earring">
                   耳環
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/product/ring"
-                >
+                <NavDropdown.Item as={NavLink} to="/product/ring">
                   戒指
                 </NavDropdown.Item>
-                {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/product/necklace"
-                >
+
+                <NavDropdown.Item as={NavLink} to="/product/necklace">
                   項鍊
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/product/bracelet"
-                >
+                <NavDropdown.Item as={NavLink} to="/product/bracelet">
                   手環/鍊
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/product/bag"
-                >
+                <NavDropdown.Item as={NavLink} to="/product/bag">
                   包包
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/product/hat"
-                >
+                <NavDropdown.Item as={NavLink} to="/product/hat">
                   帽子
                 </NavDropdown.Item>
               </NavDropdown>
@@ -100,7 +77,7 @@ function MyNavbar(props) {
         </Container>
       </Navbar>
     </>
-  )
+  );
 }
 
-export default MyNavbar
+export default MyNavbar;

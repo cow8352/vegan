@@ -9,6 +9,11 @@ function ProductBag(props) {
       {/* <h3>
         網址上參數(URL Params): {props.match.params.id}
       </h3> */}
+      <div>......</div>
+      <div>......</div>
+      <div>......</div>
+      <div>......</div>
+      <div>......</div>
     </>
   )
 }
